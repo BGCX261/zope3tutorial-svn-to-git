@@ -1,0 +1,6 @@
+{
+    "output_dir": "../bespin-0.9a1",
+    "plugins": ["embedded", "html", "python", "stylesheet", "whitetheme"],
+    "include_sample": false,
+    "jquery": "global"
+}

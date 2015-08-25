@@ -1,0 +1,114 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    i18n_domain="boston_pagelet">
+
+    <interface
+        interface=".layer.IPageletLayer"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        />
+
+    <interface
+        interface=".skin.ISkin"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="BostonPagelet"
+        />
+
+    <z3c:layout
+        for="*"
+        layer=".skin.ISkin"
+        template="boston_pagelet.pt"
+        />
+
+    <browser:page
+        for="*"
+        name="skin_macros"
+        permission="zope.View"
+        template="boston.pt"
+        layer=".skin.ISkin"
+        />
+
+    <browser:viewletManager
+        name="IGlobalMenu"
+        provides=".navigation.IGlobalMenu"
+        class=".navigation.GlobalMenu"
+        layer=".skin.ISkin"
+        permission="zope.Public"
+        />
+
+    <browser:viewlet
+        name="Home"
+        viewURL=""
+        for="*"
+        manager=".navigation.IGlobalMenu"
+        class="z3c.menu.simple.menu.GlobalMenuItem"
+        permission="zope.Public"
+        layer=".skin.ISkin"
+        weight="1"
+        />
+
+    <browser:viewlet
+        name="Actors"
+        viewURL="actors"
+        for="*"
+        manager=".navigation.IGlobalMenu"
+        class="z3c.menu.simple.menu.GlobalMenuItem"
+        permission="zope.Public"
+        layer=".skin.ISkin"
+        weight="2"
+        />
+
+    <browser:viewlet
+        name="Models"
+        viewURL="models"
+        for="*"
+        manager=".navigation.IGlobalMenu"
+        class="z3c.menu.simple.menu.GlobalMenuItem"
+        permission="zope.Public"
+        layer=".skin.ISkin"
+        weight="3"
+        />
+
+    <browser:viewlet
+        name="Extras"
+        viewURL="extras"
+        for="*"
+        manager=".navigation.IGlobalMenu"
+        class="z3c.menu.simple.menu.GlobalMenuItem"
+        permission="zope.Public"
+        layer=".skin.ISkin"
+        weight="3"
+        />
+
+    <browser:viewlet
+        name="Casting"
+        viewURL="casting"
+        for="*"
+        manager=".navigation.IGlobalMenu"
+        class="z3c.menu.simple.menu.GlobalMenuItem"
+        permission="zope.Public"
+        layer=".skin.ISkin"
+        weight="3"
+        />
+
+    <browser:viewlet
+        name="jquery"
+        manager="zope.app.boston.IJavaScript"
+        class="jquery.javascript.browser.JQueryJavaScriptViewlet"
+        permission="zope.Public"
+        layer=".skin.ISkin"
+        />
+
+    <browser:viewletManager
+        name="IListingHeadshot"
+        provides=".skin.IListingHeadshot"
+        class=".skin.ListingHeadshot"
+        layer=".skin.ISkin"
+        permission="zope.Public"
+        />
+
+    <include package=".browser" />
+
+</configure>
+

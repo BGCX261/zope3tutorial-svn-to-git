@@ -1,0 +1,5 @@
+{
+    "output_dir": "test",
+    "plugins": ["embedded", "html", "python", "command_line", "stylesheet", "project", "toolbar"],
+    "include_sample": false
+}

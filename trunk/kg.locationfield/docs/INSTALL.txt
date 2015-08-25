@@ -1,0 +1,29 @@
+kg.locationfield Installation
+-----------------------------------
+
+If you are using zc.buildout and the plone.recipe.zope2instance (standard Plone 3.3.5)
+recipe to manage your project, you can do this:
+
+* Add ``kg.locationfield`` to the list of eggs to install, e.g.:
+
+    [buildout]
+    ...
+    eggs =
+        ...
+        kg.locationfield
+       
+* Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
+
+    [instance]
+    recipe = plone.recipe.zope2instance
+    ...
+    zcml =
+        kg.locationfield
+      
+* Re-run buildout, e.g. with:
+
+    $ ./bin/buildout
+
+In the Plone Site Administration, install the product "FormGen Location Field ".
+
+The location field should now be available to add to PloneFormGen forms.

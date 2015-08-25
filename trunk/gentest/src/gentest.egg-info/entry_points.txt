@@ -1,0 +1,7 @@
+
+      [console_scripts]
+      gentest-debug = gentest.startup:interactive_debug_prompt
+      gentest-ctl = gentest.startup:zdaemon_controller
+      [paste.app_factory]
+      main = gentest.startup:application_factory
+      

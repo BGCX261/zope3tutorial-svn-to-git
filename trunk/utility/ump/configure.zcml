@@ -1,0 +1,38 @@
+<configure 
+xmlns="http://namespaces.zope.org/zope"
+xmlns:browser="http://namespaces.zope.org/browser"
+           i18n_domain="ump">
+
+    <!-- Direct clone of standard folder -->
+
+  <class class=".folder.Folder">
+    <factory
+        id="ump.Folder"
+        title="UMP Folder"
+        description="UMP folder"
+        />
+    <allow
+        attributes="getSiteManager"
+        />
+    <require
+        permission="zope.ManageServices"
+        attributes="setSiteManager"
+        />
+    <require
+        permission="zope.View"
+        interface="zope.app.container.interfaces.IReadContainer" 
+        />
+    <require
+        permission="zope.View"
+        interface="zope.app.container.interfaces.IWriteContainer"
+        />
+  </class>
+
+  <browser:addMenuItem
+      class=".folder.Folder"
+      title="UMP Folder"
+      description="UMP folder"
+      permission="zope.View"
+      />
+
+</configure>

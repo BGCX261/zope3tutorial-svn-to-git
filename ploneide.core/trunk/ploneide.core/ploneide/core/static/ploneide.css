@@ -1,0 +1,213 @@
+/* Something wrong here - giving height */
+html, body {height:100%;}
+
+#simple-editor-container {
+    position:absolute;
+    top:0; left:0; right:0; bottom:30px;
+}
+#simple-editor-layout {
+    height: 100%;
+    width: 100%;
+    border: 4px solid #cca;
+    /* No padding allowed */
+}
+
+#simple-editor-layout #main #top {
+    overflow: hidden;
+    /* Initial/min/max height for this pane */
+    min-height: 200px;
+    height: 80%;
+    /* No margin or border allowed */
+}
+
+
+#simple-editor-layout #main #bottom {
+    overflow: auto;
+    /* No margin or border allowed */
+}
+
+#simple-editor-layout .hsplitbar {
+    height: 6px;
+    background: #cca url(jquery.splitter/img/hgrabber.gif) no-repeat center;
+    /* No margin, border, or padding allowed */
+}
+#simple-editor-layout .hsplitbar.active, #simple-editor-layout .hsplitbar:hover {
+    background: #e88 url(jquery.splitter/img/hgrabber.gif) no-repeat center;
+}
+
+.vsplitbar {
+    width: 6px;
+    background: #669 url(jquery.splitter/img/vgrabber.gif) no-repeat center;
+}
+.vsplitbar:hover, .vsplitbar.active {
+    background: #c66 url(jquery.splitter/img/vgrabber.gif) no-repeat center;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* IE */
+    background: #c99;
+}
+
+
+#simple-editor-layout #left{
+    width: 200px;
+    height: 100%;
+    overflow: auto;     /* Scroll bars appear as needed */
+}
+
+#navigation-pane {
+}
+
+div.panes {
+    width:100%;
+    position:absolute;
+    top:30px; left:0; right:0; bottom:0;
+}
+
+div.pane {
+    position:relative;
+    width:100%;
+    height:100%;
+    }
+
+.editarea {
+    width:100%;
+    position:absolute;
+    top:20px; left:0; right:0; bottom:0;
+}
+.toolbar {
+    width:100%;
+    height:20px;
+    background-color:red;
+}
+
+/* http://flowplayer.org/tools/css/tabs-no-images.css */
+
+/* root element for tabs  */
+ul.css-tabs {  
+    margin:0 !important; 
+    padding:0;
+    height:30px;
+    border-bottom:1px solid #666;       
+}
+
+/* single tab */
+ul.css-tabs li {  
+    float:left;  
+    padding:0; 
+    margin:0;  
+    list-style-type:none;   
+}
+
+/* link inside the tab. uses a background image */
+ul.css-tabs a { 
+    float:left;
+    font-size:13px;
+    display:block;
+    padding:5px 30px;   
+    text-decoration:none;
+    border:1px solid #666;  
+    border-bottom:0px;
+    height:18px;
+    background-color:#efefef;
+    color:#777;
+    margin-right:2px;
+    position:relative;
+    top:1px;    
+    outline:0;
+    -moz-border-radius:4px 4px 0 0; 
+}
+
+ul.css-tabs a:hover {
+    background-color:#F7F7F7;
+    color:#333;
+}
+    
+/* selected tab */
+ul.css-tabs a.current {
+    background-color:#ddd;
+    border-bottom:1px solid #ddd;   
+    color:#000; 
+    cursor:default;
+}
+
+    
+/* tab pane */
+.css-panes div {
+    display:none;
+    border:1px solid #666;
+    border-width:0 1px 1px 1px;
+    min-height:150px;
+    padding:15px 20px;
+    background-color:#ddd;  
+}
+
+
+/* http://flowplayer.org/tools/css/tabs-accordion.css */
+/* root element for accordion. decorated with rounded borders and gradient background image */
+#accordion {
+    background:#333 url(images/h300.png) 0 0;
+    width: 300px;
+    border:1px solid #333;  
+    -background:#666;
+}
+
+/* navigation-pane header */
+#navigation-pane h2 {
+    background:#ccc url(images/h30.png);
+    margin:0;
+    padding:5px 15px;
+    font-size:14px;
+    font-weight:normal;
+    border:1px solid #fff;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;     
+}
+
+/* currently active header */
+#navigation-pane h2.current {
+    cursor:default;
+    background-color:#fff;
+}
+
+/* navigation-pane pane */
+#navigation-pane .pane {
+    border:1px solid #fff;
+    border-width:0 2px;
+    display:none;
+    padding:15px;
+    color:#fff;
+    font-size:12px;
+}
+
+/* a title inside pane */
+#navigation-pane .pane h3 {
+    font-weight:normal;
+    margin:0 0 -5px 0;
+    font-size:16px;
+    color:#999;
+}
+
+.jstree-default.jstree-focused {
+    background:none repeat scroll 0 0 #EEE !important;
+}
+
+span.closer {
+    margin: 0 0 0 10px;
+    padding: 3px;
+    color: #999;
+}
+span.closer:hover {
+    font-weight: bold;
+    color: #000;
+}
+
+/* This is not positioning correctly */
+.tooltip {
+    display:none;
+    background:transparent url(images/black_arrow.png);
+    font-size:12px;
+    height:70px;
+    width:160px;
+    padding:25px;
+    color:#fff; 
+    z-index: 100 !important;
+}

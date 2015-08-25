@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<import-steps>
+ <import-step id="locationfield-uninstall" version="20090323-01"
+              handler="kg.locationfield.setuphandlers.uninstall"
+              title="Uninstall step for PloneFormGen LocationField">
+    Uninstall PloneFormGen LocationField things.
+ </import-step>
+</import-steps>

@@ -1,0 +1,8 @@
+Well write the program
+
+These are bugs/workarounds which need to be backed out.
+
+1. Could not get skin resource folder to work in Plone 3.3.5 - renamed to dskin
+2. Could not get default static folder to work in Plone 3.3.5 - manually created
+3. Dynatree needs jquery.ui - not part of Plone 4
+     switch to jstree

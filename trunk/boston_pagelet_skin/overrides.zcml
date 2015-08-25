@@ -1,0 +1,16 @@
+<configure
+    xmlns:zope="http://namespaces.zope.org/zope"
+    xmlns="http://namespaces.zope.org/browser"
+    xmlns:help="http://namespaces.zope.org/help"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="zope">
+
+  <viewletManager
+      name="zope.app.boston.ILeft"
+      provides="zope.app.boston.ILeft"
+      class=".newmanager.LeftViewletManager"
+      layer="zope.app.boston.boston"
+      permission="zope.Public"
+      />
+
+</configure>

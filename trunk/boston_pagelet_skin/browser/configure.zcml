@@ -1,0 +1,11 @@
+<configure
+    xmlns:zope="http://namespaces.zope.org/zope"
+    xmlns="http://namespaces.zope.org/browser">
+
+  <resource
+      name="skin.css"
+      file="skin.css"
+        layer="..skin.ISkin"
+      />
+
+</configure>
